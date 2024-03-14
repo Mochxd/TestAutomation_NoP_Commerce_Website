@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:\Users\zas\ProjectNonCommerceWebsite\src\test">
+        <classes>
+            <class name="Register.RegisterTests">
+                <methods>
+                    <include name="testRedirectSuccessfullyToRegisterPage"/>
+                    <include name="testSuccessfullyRegisterWithExternalData"/>
+                    <include name="testInvalidRegister"/>
+                    <include name="testEmptyEmail"/>
+                    <include name="testPasswordAndConfirmPasswordMismatch"/>
+                </methods>
+            </class>
+            <class name="Login.LoginTests">
+                <methods>
+                    <include name="loginSuccessfully"/>
+                    <include name="loginUnSuccessfullyWithInvalidCustomer"/>
+                </methods>
+            </class>
+            <class name="ForgotPassword.ForgotPasswordTests">
+                <methods>
+                    <include name="testRedirectSuccessfullyToForgotPasswordPage"/>
+                    <include name="testSendEmail"/>
+                </methods>
+            </class>
+            <class name="Login.AddNewAddressTests">
+                <methods>
+                    <include name="testAddNewAddress"/>
+                    <include name="testSuccessfullyNewAddressISAdded"/>
+                </methods>
+            </class>
+            <class name="Login.AccountPageTests">
+                <methods>
+                    <include name="testAddingAddress"/>
+                </methods>
+            </class>
+            <class name="ProductItems.ProductItemsTests">
+                <methods>
+                    <include name="testEmptyShoppingCart"/>
+                    <include name="testSuccessfullyAddProductToCartProduct1"/>
+                    <include name="testSuccessfullyAddProductToCartProduct2"/>
+                    <include name="testSuccessfullyAddProductToCartProduct3"/>
+                </methods>
+            </class>
+            <class name="ProductItems.ProductItemsTests">
+                <methods>
+                    <include name="testSuccessfullyAddProductToWishlistProduct1"/>
+                    <include name="testEmptyWishlist"/>
+                </methods>
+            </class>
+            <class name="CheckOut.CheckOutTests">
+                <methods>
+                    <include name="testSuccessfullyCheckoutUsingMoneyOrder"/>
+                    <include name="testAddingOrders"/>
+                </methods>
+            </class>
+            <class name="Search.SearchTests">
+                <methods>
+                    <include name="testValidSearch"/>
+                    <include name="testInValidSearch"/>
+                    <include name="testEmptySearch"/>
+                    <include name="testSortByLowestPrice"/>
+                    <include name="testSortByHighestPrice"/>
+                    <include name="testSortByAlphabetical"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
