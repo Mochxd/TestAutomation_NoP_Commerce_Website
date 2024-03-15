@@ -20,7 +20,7 @@ Welcome to the README for the Test Automation project focusing on the nopCommerc
 ## Technologies Used
 <a href="https://selenium.dev"><img src="https://selenium.dev/images/selenium_logo_square_green.png" width="40" height="40" alt="Selenium"/></a>
 <a href="https://testng.org/"><img src="https://github.com/Mochxd/TAU_InternetDemoWebsite/assets/122634626/86a31183-1950-4cf4-bbbe-c1c1d6dc2567" width="40" height="40" alt="TestNG"/></a>
-<a href="https://allurereport.org/"><img src="https://github.com/Mochxd/TestAutomation_Non_Commerce/assets/122634626/1aa8b511-e2db-45b1-b0b5-0ae7fd11f8b6" width="40" height="40" alt="TestNG"/></a>
+<a href="https://allurereport.org/"><img src="https://github.com/Mochxd/TestAutomation_Non_Commerce/assets/122634626/1aa8b511-e2db-45b1-b0b5-0ae7fd11f8b6" width="40" height="40" alt="allurereport"/></a>
 
 ## Prerequisites
 Before diving into the project, ensure you have the following prerequisites:
