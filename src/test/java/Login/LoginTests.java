@@ -11,7 +11,7 @@ import static org.testng.Assert.assertTrue;
 public class LoginTests extends BaseTests {
     @Description("When I Sign in with an already registered user, Then I should login successfully")
     @Story("Login")
-    @Severity(SeverityLevel.CRITICAL)
+    @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "LoginData", priority = 1)
     public void loginSuccessfully(String email, String password){
         LoginPage loginPage = homePage.ClickLoginButton();

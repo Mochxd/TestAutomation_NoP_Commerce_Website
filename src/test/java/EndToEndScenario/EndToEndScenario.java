@@ -24,7 +24,7 @@ public class EndToEndScenario extends BaseTests {
     private String password = "25498123";
     @Description("Given i use a valid email and password, When I am in the login page, Then I should able to add a valid product item, and make an order")
     @Story("End To End Scenario")
-    @Severity(SeverityLevel.CRITICAL)
+    @Severity(SeverityLevel.BLOCKER)
     @Test(priority = 1)
     public void fullUserPurchaseScenario(){
         SuccessfullyRegister(firstName,lastName,email,password);

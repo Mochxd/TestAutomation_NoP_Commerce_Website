@@ -16,7 +16,7 @@ import static org.testng.Assert.assertEquals;
 public class RegisterTests extends BaseTests {
     @Description("Given i try to redirect to the register page, When I am in home page, Then I should redirect successfully")
     @Story("Register")
-    @Severity(SeverityLevel.CRITICAL)
+    @Severity(SeverityLevel.BLOCKER)
     @Test
     public void testRedirectSuccessfullyToRegisterPage(){
         RegisterPage registerPage = homePage.ClickRegisterButton();
