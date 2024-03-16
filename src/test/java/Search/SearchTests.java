@@ -76,7 +76,7 @@ public class SearchTests extends BaseTests {
         SearchPage searchPage = homePage.clickSearchButton();
         searchPage.selectSortBy("Price: High to Low");
         try {
-            Thread.sleep(500);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -95,7 +95,7 @@ public class SearchTests extends BaseTests {
         SearchPage searchPage = homePage.clickSearchButton();
         searchPage.selectSortBy("Name: A to Z");
         try {
-            Thread.sleep(500);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
