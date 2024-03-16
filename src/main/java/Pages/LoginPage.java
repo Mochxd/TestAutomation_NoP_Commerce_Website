@@ -18,7 +18,6 @@ public class LoginPage {
         this.driver = driver;
     }
 
-
     public String getWelcomeText(){
         return driver.findElement(welcomeText).getText();
     }
@@ -57,5 +56,4 @@ public class LoginPage {
         }
         driver.findElement(logOutButton).click();
     }
-
 }

@@ -74,5 +74,4 @@ public class HomePage {
         driver.findElement(wishlist).click();
         return new WishlistPage(driver);
     }
-
 }
