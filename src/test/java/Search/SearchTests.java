@@ -57,7 +57,7 @@ public class SearchTests extends BaseTests {
         SearchPage searchPage = homePage.clickSearchButton();
         searchPage.selectSortBy("Price: Low to High");
         try {
-            Thread.sleep(500);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
