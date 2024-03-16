@@ -75,7 +75,7 @@ public class HomePage {
         return new Product3Page(driver);
     }
     public WishlistPage clickWishlist(){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
         wait.until(ExpectedConditions.elementToBeClickable(wishlist));
         driver.findElement(wishlist).click();
         return new WishlistPage(driver);
