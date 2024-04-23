@@ -51,7 +51,7 @@ public class BaseTests {
 
         // Parse the JSON file into JSONArray
         JSONArray jsonArray = (JSONArray) jsonParser.parse(reader);
-        Object[][] arr = new Object[jsonArray.size()][5]; // Change this line
+        Object[][] arr = new Object[jsonArray.size()][5];
 
         for (int i = 0; i < jsonArray.size(); i++) {
             JSONObject user = (JSONObject) jsonArray.get(i);
