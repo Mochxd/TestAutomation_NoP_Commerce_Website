@@ -53,6 +53,31 @@ public class RegisterTests extends BaseTests {
         assertEquals(registerPage.getRegisterSuccessfullyMessage(),"Your registration completed","Register message is incorrect");
         registerPage.clickContinueAfterRegister();
     }
+    @Description("When I enter valid data From JSon file in the sign up form And click the signup button," +
+            " Then I should be registered successfully And I can see message" +
+            " that Your registration completed")
+    @Story("Register")
+    @Severity(SeverityLevel.BLOCKER)
+    @Test(dataProvider = "jsonData", priority = 1)
+    public void testSuccessfullyRegisterWithJSONData(String firstName,String lastName, String email, String password, String ConfirmPassword) throws IOException {
+        RegisterPage registerPage = homePage.ClickRegisterButton();
+        registerPage.selectGender("male");
+        registerPage.setFirstName(firstName);
+        registerPage.setLastName(lastName);
+        registerPage.selectDay("5");
+        registerPage.selectMonth("April");
+        registerPage.selectYear("1998");
+        registerPage.setEmail(email);
+        registerPage.storeEmailData(email,password);
+        registerPage.storeEmailAddressData(email,password);
+        registerPage.setCompanyName("ITI");
+        registerPage.selectNewsletter();
+        registerPage.setPassword(password);
+        registerPage.setConfirmPassword(ConfirmPassword);
+        registerPage.clickRegisterButton();
+        assertEquals(registerPage.getRegisterSuccessfullyMessage(),"Your registration completed","Register message is incorrect");
+        registerPage.clickContinueAfterRegister();
+    }
     SoftAssert softAssert = new SoftAssert();
     @Description("Given i don't enter any information, When I am in register page, Then I should get an error message")
     @Story("Register")
