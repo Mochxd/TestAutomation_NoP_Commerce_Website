@@ -8,7 +8,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 
 import org.apache.poi.ss.usermodel.*;
@@ -17,6 +16,11 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.FileInputStream;
 import java.io.IOException;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+import java.io.FileReader;
 public class BaseTests {
     private WebDriver driver;
     protected HomePage homePage;
@@ -27,7 +31,7 @@ public class BaseTests {
         driver.manage().window().maximize();
         homePage = new HomePage(driver);
     }
-    @BeforeMethod
+    //@BeforeMethod
     public void goHome(){
         driver.get("https://demo.nopcommerce.com/");
     }
@@ -39,6 +43,26 @@ public class BaseTests {
         ChromeOptions options = new ChromeOptions();
         options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
         return options;
+    }
+    @DataProvider(name = "jsonData")
+    public Object[][] jsonData() throws IOException, ParseException {
+        JSONParser jsonParser = new JSONParser();
+        FileReader reader = new FileReader("C:\\Users\\zas\\ProjectNonCommerceWebsite\\src\\main\\resources\\JsonData.json");
+
+        // Parse the JSON file into JSONArray
+        JSONArray jsonArray = (JSONArray) jsonParser.parse(reader);
+        Object[][] arr = new Object[jsonArray.size()][5]; // Change this line
+
+        for (int i = 0; i < jsonArray.size(); i++) {
+            JSONObject user = (JSONObject) jsonArray.get(i);
+            arr[i][0] = user.get("First name");
+            arr[i][1] = user.get("Last name");
+            arr[i][2] = user.get("Email");
+            arr[i][3] = user.get("Password");
+            arr[i][4] = user.get("Confirm Password");
+        }
+
+        return arr;
     }
         @DataProvider
         public static Object[][] RegisterData() throws IOException{
