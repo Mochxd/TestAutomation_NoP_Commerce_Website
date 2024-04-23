@@ -40,7 +40,7 @@ The aim of this project is to showcase test automation for the nopCommerce websi
 To set up the project, follow these steps:
 
 1. Clone the repository to your local machine:
-   git clone https://github.com/Mochxd/TestAutomation_Non_Commerce.git
+   git clone https://github.com/Mochxd/TestAutomation_NoP_Commerce_Website.git
 
 2. Open the project in your preferred Java IDE (e.g., IntelliJ, Eclipse).
 3. Install the required dependencies (Selenium WebDriver, TestNG) using Maven. You can do this by right-clicking on the project and selecting "Maven" -> "Update Project."
